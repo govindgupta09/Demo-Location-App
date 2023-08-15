@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarTrackVertical="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/txt_get_current_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_margin="20dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Get Current Location"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location"
+                android:background="@drawable/txt_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_get_current_location"/>
+
+            <TextView
+                android:id="@+id/txt_lat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/txt_background"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="Latitude"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@id/txt_get_current_location"
+                app:layout_constraintStart_toStartOf="@id/txt_get_current_location"
+                app:layout_constraintTop_toBottomOf="@id/img_location" />
+
+            <TextView
+                android:id="@+id/txt_lng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/txt_background"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="Longitude"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@id/txt_get_current_location"
+                app:layout_constraintStart_toStartOf="@id/txt_get_current_location"
+                app:layout_constraintTop_toBottomOf="@id/txt_lat" />
+
+            <TextView
+                android:id="@+id/country_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/txt_background"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="Country Name"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@id/txt_get_current_location"
+                app:layout_constraintStart_toStartOf="@id/txt_get_current_location"
+                app:layout_constraintTop_toBottomOf="@id/txt_lng" />
+
+            <TextView
+                android:id="@+id/txt_locality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/txt_background"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="Locality"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@id/txt_get_current_location"
+                app:layout_constraintStart_toStartOf="@id/txt_get_current_location"
+                app:layout_constraintTop_toBottomOf="@id/country_name" />
+
+            <TextView
+                android:id="@+id/txt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/txt_background"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="Address"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@id/txt_get_current_location"
+                app:layout_constraintStart_toStartOf="@id/txt_get_current_location"
+                app:layout_constraintTop_toBottomOf="@id/txt_locality" />
+
+            <Button
+                android:id="@+id/btn_get_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="30dp"
+                android:padding="8dp"
+                android:text="Get Location"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_address" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
